@@ -655,6 +655,15 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+  .bg-black\/100 {
+    background-color: var(--color-black);
+  }
   .bg-green-800 {
     background-color: var(--color-green-800);
   }
@@ -700,6 +709,8 @@
   .bg-center {
     background-position: center;
   }
+  .bg-opacity-50 { --tw-bg-opacity: 0.5 }
+  
   .object-cover {
     object-fit: cover;
   }
